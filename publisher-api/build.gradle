@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group 'com.marcolino.thiago'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':abstract-publisher')
+    compile project(':kafka-publisher')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
