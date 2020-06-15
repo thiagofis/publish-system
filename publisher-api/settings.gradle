@@ -6,3 +6,6 @@ project(":abstract-publisher").projectDir = new File("../abstract-publisher")
 include ':kafka-publisher'
 project(":kafka-publisher").projectDir = new File("../kafka-publisher")
 
+include ':application-publisher'
+project(":application-publisher").projectDir = new File("../application-publisher")
+

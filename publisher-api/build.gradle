@@ -1,4 +1,6 @@
 plugins {
+    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
 }
 
@@ -7,10 +9,15 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://packages.confluent.io/maven/'
+    }
 }
 
 dependencies {
     compile project(':abstract-publisher')
     compile project(':kafka-publisher')
+    compile project(':application-publisher')
+    compile 'org.springframework.boot:spring-boot-starter-web'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
