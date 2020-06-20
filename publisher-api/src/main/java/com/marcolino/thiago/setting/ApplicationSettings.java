@@ -7,15 +7,22 @@ import java.util.Map;
 @ConfigurationProperties(prefix = "settings")
 public class ApplicationSettings {
 
-    private Map<String, Object> settings;
+    private String topicName;
+    private Map<String, Object> publisherProperties;
 
-    public Map<String, Object> getSettings() {
-        return settings;
+    public String getTopicName() {
+        return topicName;
     }
 
-    public void setSettings(Map<String, Object> settings) {
-        this.settings = settings;
+    public void setTopicName(String topicName) {
+        this.topicName = topicName;
     }
 
+    public Map<String, Object> getPublisherProperties() {
+        return publisherProperties;
+    }
 
+    public void setSettings(Map<String, Object> publisherProperties) {
+        this.publisherProperties = publisherProperties;
+    }
 }

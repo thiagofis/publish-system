@@ -1,7 +1,5 @@
 package com.marcolino.thiago;
 
-import java.io.Closeable;
-
-public interface Publisher extends Closeable {
+public interface Publisher {
     void publish(Message message);
 }
