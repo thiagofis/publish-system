@@ -13,7 +13,7 @@ public class KafkaPublisher implements Publisher {
     private final String topic;
 
     @Autowired
-    public KafkaPublisher(Configurations configurations) {
+    public KafkaPublisher(PublisherConfigurations configurations) {
         this.producer = new KafkaProducer<>(configurations);
         this.topic = configurations.getTopicName();
     }
