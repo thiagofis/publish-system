@@ -1,2 +1,8 @@
 rootProject.name = 'application-publisher'
 
+include ':abstract-publisher'
+project(":abstract-publisher").projectDir = new File("../abstract-publisher")
+
+include ':kafka-publisher'
+project(":kafka-publisher").projectDir = new File("../kafka-publisher")
+
