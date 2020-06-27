@@ -1,4 +1,4 @@
-rootProject.name = 'publisher-api'
+rootProject.name = 'publishing-api'
 
 include ':abstract-publisher'
 project(":abstract-publisher").projectDir = new File("../abstract-publisher")

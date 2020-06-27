@@ -14,6 +14,7 @@ public class ApplicationRunner {
         log.info("Starting the application");
         SpringApplication.run(ApplicationRunner.class, args);
         log.info("Application is running");
+        log.info("Swagger http://localhost:8080/swagger-ui.html");
     }
 
 }
