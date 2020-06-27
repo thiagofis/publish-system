@@ -1,9 +1,8 @@
 package com.marcolino.thiago.bean;
 
-import com.marcolino.thiago.PublisherConfigurations;
 import com.marcolino.thiago.KafkaPublisherPublisherConfigurations;
+import com.marcolino.thiago.PublisherConfigurations;
 import com.marcolino.thiago.setting.ApplicationSettings;
-import org.jeasy.random.EasyRandom;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,11 +21,5 @@ public class ApplicationBean {
     public PublisherConfigurations configurations(){
         return new KafkaPublisherPublisherConfigurations(applicationSettings.getTopicName(), applicationSettings.getPublisherProperties());
     }
-
-    @Bean
-    public EasyRandom easyRandom() {
-        return new EasyRandom();
-    }
-
 
 }

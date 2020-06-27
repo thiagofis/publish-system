@@ -8,21 +8,18 @@ import java.util.Map;
 public class ApplicationSettings {
 
     private String topicName;
-    private Map<String, Object> publisherProperties;
-
     public String getTopicName() {
         return topicName;
     }
-
     public void setTopicName(String topicName) {
         this.topicName = topicName;
     }
 
+    private Map<String, Object> publisherProperties;
     public Map<String, Object> getPublisherProperties() {
         return publisherProperties;
     }
-
-    public void setSettings(Map<String, Object> publisherProperties) {
+    public void setPublisherProperties(Map<String, Object> publisherProperties) {
         this.publisherProperties = publisherProperties;
     }
 }

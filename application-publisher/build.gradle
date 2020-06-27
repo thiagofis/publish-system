@@ -18,3 +18,11 @@ dependencies {
     implementation project(':kafka-publisher')
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}

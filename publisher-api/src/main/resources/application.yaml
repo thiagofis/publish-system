@@ -1,6 +1,6 @@
 settings:
   topicName: topic_test_1
   publisherProperties:
-    ["bootstrap.servers"]: localhost:9092,localhost:9093,localhost:9094
-    ["key.serializer"]: org.apache.kafka.common.serialization.StringSerializer
-    ["value.serializer"]: org.apache.kafka.common.serialization.StringSerializer
+    "[bootstrap.servers]": localhost:9092,localhost:9093,localhost:9094
+    "[key.serializer]": org.apache.kafka.common.serialization.StringSerializer
+    "[value.serializer]": org.apache.kafka.common.serialization.StringSerializer

@@ -2,7 +2,7 @@ package com.marcolino.thiago.controller;
 
 import com.marcolino.thiago.message.JsonMessage;
 import com.marcolino.thiago.service.PublisherService;
-import com.marcolino.thiago.util.ObjectBuilder;
+import com.marcolino.thiago.util.JsonMessageGenerator;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,11 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class PublisherController {
 
     private final PublisherService publisherService;
-    private final ObjectBuilder objectBuilder;
 
-    public PublisherController(PublisherService publisherService, ObjectBuilder objectBuilder) {
+    public PublisherController(PublisherService publisherService) {
         this.publisherService = publisherService;
-        this.objectBuilder = objectBuilder;
     }
 
     @PostMapping(path = "/single")
@@ -27,7 +25,7 @@ public class PublisherController {
 
     @PostMapping(path = "/many")
     public void many(int amount) {
-        var messages = objectBuilder.build(JsonMessage.class, amount);
-        publisherService.publish(messages.toArray(JsonMessage[]::new));
+        var messages = JsonMessageGenerator.generate(amount);
+        publisherService.publish(messages);
     }
 }
